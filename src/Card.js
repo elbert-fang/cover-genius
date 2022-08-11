@@ -18,6 +18,31 @@ export default function Card({
     setStatus(!status);
   }
 
+  function formateDate(date) {
+    const monthNames = [
+      "Jan",
+      "Feb",
+      "Mar",
+      "Apr",
+      "May",
+      "Jun",
+      "Jul",
+      "Aug",
+      "Sep",
+      "Oct",
+      "Nov",
+      "Dec",
+    ];
+    const day = date.slice(-2);
+    const monthIndex = date.slice(5, 7);
+    console.log(monthIndex);
+    const monthName = monthIndex.startsWith("0")
+      ? monthNames[monthIndex.slice(-1)]
+      : monthNames[monthIndex - 1];
+    const year = date.slice(0, 4);
+    return `${day}-${monthName.toUpperCase()}-${year}`;
+  }
+
   return (
     <div
       className={`card cover-card ${status ? "active" : ""}`}
@@ -59,12 +84,13 @@ export default function Card({
         <hr />
         <div className="cover-info__details">
           <div className="cover-info__details-item payment">
-            <h5> {paymentDate.slice(0, 10)} </h5>
+            <h5> {formateDate(paymentDate.slice(0, 10))} </h5>
             <p className="small"> Payment date </p>
           </div>
           <div className="cover-info__details-item coverage-date">
             <h5>
-              {coverStartDate} {coverEndDate && ` to ${coverEndDate}`}
+              {formateDate(coverStartDate)}{" "}
+              {coverEndDate && ` to ${formateDate(coverEndDate)}`}
             </h5>
             <p className="small">
               {coverEndDate ? "Coverage dates" : "Date shipped"}
@@ -79,7 +105,7 @@ export default function Card({
           </div>
           {renewal && (
             <div className="cover-info__details-item renewal">
-              <h5> {coverStartDate} </h5>
+              <h5> {formateDate(coverStartDate)} </h5>
               <p className="small"> Renewal date </p>
             </div>
           )}
