@@ -3,61 +3,59 @@ body {
   font-family: "brandon-grotesque", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: #F6F6F6;
+  background: #f6f6f6;
 }
 
-h1{
+h1 {
   font-weight: 900;
   font-size: 40px;
   line-height: 50px;
   margin-bottom: 24px;
 }
 
-
-h3{
+h3 {
   font-weight: 700;
   font-size: 24px;
   line-height: 30px;
   margin: 0;
 }
 
-
-h5{
+h5 {
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
   margin: 4px 0;
 }
 
-p{
-  font-family: 'Bitter';
+p {
+  font-family: "Bitter";
   font-weight: 400;
   font-size: 14px;
   line-height: 21px;
-  color: #73777C;
+  color: #73777c;
   margin: 4px 0;
   line-height: 18px;
 }
 
 hr {
   border: none;
-  border-bottom: 1px solid #E0E4E8;
+  border-bottom: 1px solid #e0e4e8;
   margin: 16px auto;
 }
 
-.flex{
+.flex {
   display: flex;
 }
 
-.justify-content-center{
+.justify-content-center {
   justify-content: center;
 }
 
-.align-items-center{
+.align-items-center {
   align-items: center;
 }
 
-.hidden{
+.hidden {
   display: none;
 }
 
@@ -70,7 +68,7 @@ hr {
 
 .card {
   display: flex;
-  background: #FFFFFF;
+  background: #ffffff;
   border-radius: 3px;
   padding: 16px;
   margin: 32px auto;
@@ -105,12 +103,12 @@ hr {
   width: 48px;
   min-width: 48px;
   height: 48px;
-  border: 2px solid #FFD200;
+  border: 2px solid #ffd200;
   border-radius: 50px;
 }
 
 .cover-info__status-left.active {
-  background-color: #FFE600;
+  background-color: #ffe600;
 }
 
 .cover-info__status-left.active svg {
@@ -125,7 +123,7 @@ hr {
 .cover-info__details-item:not(:last-child) {
   padding-right: 16px;
   margin-right: 16px;
-  border-right: 1px solid #E0E4E8;
+  border-right: 1px solid #e0e4e8;
 }
 
 .desktop-logo img {
@@ -194,10 +192,8 @@ hr {
   }
 }
 
-
 /* Mobile styling */
 @media only screen and (max-width: 580px) {
-
   h1 {
     font-size: 24px;
     line-height: 30px;
@@ -211,7 +207,7 @@ hr {
 
   hr {
     border: none;
-    border-bottom: 1px solid #E0E4E8;
+    border-bottom: 1px solid #e0e4e8;
     margin: 8px auto;
   }
 
