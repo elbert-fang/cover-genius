@@ -12,7 +12,11 @@ export default function Card({ title, id, description, paymentDate, coverStartDa
         <div className={`card cover-card ${status && 'active'}` } onClick={handleStatus}>
             <div className="cover-info">
                 <div className="cover-info__status">
-                    <div className='cover-info__status-left'> toggle </div>
+                    <div className={`cover-info__status-left  ${status && 'active'}`}>
+                        <svg width="10" height="18" viewBox="0 0 10 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1 16.5L8.5 9L1 1.5" stroke="#2D2D2D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
                     <div className="cover-info__status-right">
                         <h3>{ title }</h3>
                         <div className="cover-info-general">

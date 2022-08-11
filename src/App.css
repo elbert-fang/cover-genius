@@ -38,6 +38,18 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 48px;
+  height: 48px;
+  border: 2px solid #FFD200;
+  border-radius: 50px;
+}
+
+.cover-info__status-left.active {
+  background-color:#FFE600;
+}
+
+.cover-info__status-left.active svg{
+  transform: rotate(90deg);
 }
 
 .cover-info__details{
