@@ -35,7 +35,6 @@ export default function Card({
     ];
     const day = date.slice(-2);
     const monthIndex = date.slice(5, 7);
-    console.log(monthIndex);
     const monthName = monthIndex.startsWith("0")
       ? monthNames[monthIndex.slice(-1)]
       : monthNames[monthIndex - 1];
