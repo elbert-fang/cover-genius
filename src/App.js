@@ -1,9 +1,7 @@
 import React from 'react'
 import Card from './Card'
-import './App.css';
 
 function App() {
-
   const [coverData, setCoverData] = React.useState([])
 
   React.useEffect(() => {
@@ -22,7 +20,6 @@ function App() {
       });
   }, []);
 
-  console.log(coverData)
   const coverCards = coverData.map(cover => {
     return <Card title={cover.title} id={cover.id} description={cover.description}
       paymentDate={cover.payment_date} coverStartDate={cover.coverage_start_date}

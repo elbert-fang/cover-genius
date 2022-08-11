@@ -57,5 +57,194 @@ hr {
   align-items: center;
 }
 
+.hidden{
+  display: none;
+}
+
+.App {
+  text-align: left;
+  max-width: 1130px;
+  margin: 48px auto;
+  padding: 0 16px;
+}
+
+.card {
+  display: flex;
+  background: #FFFFFF;
+  border-radius: 3px;
+  padding: 16px;
+  margin: 32px auto;
+  text-align: left;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.card.active {
+  box-shadow: 0px 24px 32px rgba(45, 45, 45, 0.16);
+}
+
+.cover-info {
+  width: 80%;
+  padding-right: 32px;
+}
+
+.cover-logo {
+  width: 20%;
+}
+
+.cover-info__status {
+  display: flex;
+}
+
+.cover-info__status-left {
+  margin-right: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 48px;
+  min-width: 48px;
+  height: 48px;
+  border: 2px solid #FFD200;
+  border-radius: 50px;
+}
+
+.cover-info__status-left.active {
+  background-color: #FFE600;
+}
+
+.cover-info__status-left.active svg {
+  transform: rotate(90deg);
+}
+
+.cover-info__details {
+  display: flex;
+  flex-direction: row;
+}
+
+.cover-info__details-item:not(:last-child) {
+  padding-right: 16px;
+  margin-right: 16px;
+  border-right: 1px solid #E0E4E8;
+}
+
+.desktop-logo img {
+  max-width: 197.6px;
+  width: 100%;
+}
+
+.tablet-logo,
+.mobile-logo {
+  display: none;
+}
+
+.cover-info__status-wrapper {
+  display: flex;
+}
+
+.small {
+  font-size: 12px;
+}
+
+/* tablet styling */
+@media only screen and (max-width: 835px) {
+  h1 {
+    font-size: 32px;
+    line-height: 40px;
+    margin-bottom: 16px;
+  }
+
+  h3 {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .card {
+    margin: 24px 0;
+  }
+
+  .desktop-logo {
+    display: none;
+  }
+
+  .tablet-logo {
+    display: flex;
+  }
+
+  .tablet-logo img {
+    max-width: 109.33px;
+  }
+
+  .cover-info {
+    width: 100%;
+  }
+
+  .cover-info__status-wrapper {
+    max-width: 70%;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .cover-info__status {
+    justify-content: space-between;
+  }
+
+  .cover-info {
+    padding-right: 0;
+  }
+}
 
 
+/* Mobile styling */
+@media only screen and (max-width: 580px) {
+
+  h1 {
+    font-size: 24px;
+    line-height: 30px;
+    margin-bottom: 8px;
+  }
+
+  h3 {
+    font-size: 18px;
+    line-height: 22px;
+  }
+
+  hr {
+    border: none;
+    border-bottom: 1px solid #E0E4E8;
+    margin: 8px auto;
+  }
+
+  .card {
+    margin: 16px 0;
+  }
+
+  .cover-info__status-left,
+  .tablet-logo,
+  .cover-info__details-item.payment,
+  .cover-info__details-item.premium,
+  .cover-info__details-item.renewal {
+    display: none;
+  }
+
+  .cover-info__status-wrapper {
+    max-width: 100%;
+  }
+
+  .mobile-logo {
+    display: flex;
+    width: 84px;
+  }
+
+  .mobile-logo img {
+    width: 100%;
+  }
+
+  .cover-info__details {
+    justify-content: space-between;
+  }
+
+  .cover-info__details-item:not(:last-child) {
+    border-right: 0;
+  }
+}
